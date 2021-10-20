@@ -1,5 +1,9 @@
 const body = document.querySelector("body"); 
-body.classList.add("container-fluid");
+body.classList.add("container");
+body.classList.add("bg-light");
+body.classList.add("mg-0");
+body.classList.add("w-50");
+body.classList.add("p-3");
 
 // body.style.margin= "0 auto";
 // body.style.boxSizing="border-box";
@@ -16,6 +20,7 @@ header1.id="row1"
 const uList = document.createElement("ul"); // create an unorder list
 uList.id = "uList";
 //@@@@@@@@@@class unorderlist
+uList.classList.add("list-group");
 //@@@@@@@@@@@class h1
 body.append(header1); //to append in body parent.append(element)
 body.append(uList);
@@ -34,9 +39,9 @@ const addToList = () => {
 const text = document.createElement("INPUT");
 text.id = "textField";
 //@@@@@@@@@@@class text field
-text.style.width= "50%";
 // text.classList.add("col-md-2");
 text.classList.add("form-control")
+text.classList.add("input-group")
 text.setAttribute("type", "text");
 body.append(text);
 const add = document.createElement("INPUT");
@@ -46,6 +51,7 @@ add.setAttribute("value", "Add");
 //@@@@@@@@@@@class add btn
 add.classList.add("btn");
 add.classList.add("btn-default");
+add.classList.add("input-group")
 // add.classList.add("row");
 body.append(add);
 add.addEventListener("click", addToList);
@@ -70,7 +76,7 @@ const randerList = () => {
   toDos.forEach((elem, index) => {
     let liList = document.createElement("li");
     //@@@@@@@@@@@class list 
-    // liList.classList.add("bg-warning");
+    liList.classList.add("list-group-item");
     liList.style.marginTop= "10px"
     liList.id = index;
     liList.innerHTML = elem;
@@ -85,7 +91,7 @@ const randerList = () => {
     //@@@@@@@@@@@class delete btn btn btn-danger
     deleteBtn.classList.add("btn");
     deleteBtn.classList.add("btn-default");
-    deleteBtn.style.margin= "10px 5px";
+    deleteBtn.classList.add("m-3");
     deleteBtn.id = "delBtn";
     deleteBtn.addEventListener("click", () => delFunc(index));
     liList.append(deleteBtn);
@@ -95,7 +101,7 @@ const randerList = () => {
     const editBtn = document.createElement("INPUT");
     editBtn.setAttribute("type", "button");
     editBtn.setAttribute("value", "Edit");
-    editBtn.style.margin= "10px 5px";
+    // editBtn.classList.add("m-5");
     //@@@@@@@@@@@class edit btn btn btn-success
 
 editBtn.classList.add("btn");
