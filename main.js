@@ -6,9 +6,12 @@ body.classList.add("container-fluid");
 // body.style.width="50%"
 //@@@@@@@@@@@class//to select the body
 const header1 = document.createElement("h1"); //create h1 (header)
+header1.classList.add("text-center");
+header1.classList.add("text-uppercase");
+
 header1.innerHTML = " To Do List"; //add content in h1
 header1.classList.add("row")
-header1.style.color="blue"
+
 header1.id="row1"
 const uList = document.createElement("ul"); // create an unorder list
 uList.id = "uList";
