@@ -24,7 +24,6 @@ const liElements = document.querySelector("#uList");
 //     liElements.append(liList);
 // }
 toDos.forEach((elem) => {
-console.log(elem);
 const liList = document.createElement("li");
 liList.innerHTML= elem;
 liElements.append(liList);
@@ -33,14 +32,27 @@ liElements.append(liList);
 randerList();
 
 //5
+const addToList = () => {
+    // console.log("hi!");
+const textValue = document.querySelector("#text1");
+// console.log(textValue.value);
+
+
+}
 
 const text1 = document.createElement("INPUT");
+text1.id = "text1"
 text1.setAttribute("type", "text");
+body.append(text1);
 const btn1 = document.createElement("INPUT");
 btn1.setAttribute("type", "button");
 btn1.setAttribute("value", "Add");
-body.append(text1);
+
 body.append(btn1);
+
+btn1.addEventListener("click",addToList);
+
+addToList();
 
 
 
