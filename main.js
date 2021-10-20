@@ -1,9 +1,16 @@
 const body = document.querySelector("body"); 
 body.classList.add("container");
+
+body.classList.add("d-flex");
+body.classList.add("flex-column");
+body.classList.add("flex-md-column");
 body.classList.add("bg-light");
-body.classList.add("mg-0");
+// body.classList.add("m-0");
+body.classList.add("mt-5");
 body.classList.add("w-50");
 body.classList.add("p-3");
+body.classList.add("h4");
+
 
 // body.style.margin= "0 auto";
 // body.style.boxSizing="border-box";
@@ -12,7 +19,8 @@ body.classList.add("p-3");
 const header1 = document.createElement("h1"); //create h1 (header)
 header1.classList.add("text-center");
 header1.classList.add("text-uppercase");
-
+header1.classList.add("input-group");
+header1.classList.add("h1");
 header1.innerHTML = " To Do List"; //add content in h1
 header1.classList.add("row")
 
@@ -40,8 +48,8 @@ const text = document.createElement("INPUT");
 text.id = "textField";
 //@@@@@@@@@@@class text field
 // text.classList.add("col-md-2");
-text.classList.add("form-control")
-text.classList.add("input-group")
+text.classList.add("form-control");
+text.classList.add("input-group");
 text.setAttribute("type", "text");
 body.append(text);
 const add = document.createElement("INPUT");
@@ -50,8 +58,8 @@ add.setAttribute("type", "button");
 add.setAttribute("value", "Add");
 //@@@@@@@@@@@class add btn
 add.classList.add("btn");
-add.classList.add("btn-default");
-add.classList.add("input-group")
+add.classList.add("btn-secondary");
+add.classList.add("input-group");
 // add.classList.add("row");
 body.append(add);
 add.addEventListener("click", addToList);
