@@ -18,25 +18,29 @@ const toDos = ["wake up","eat breakfast", "code"];
 //4
 const randerList = () => {
 const liElements = document.querySelector("#uList");
-// for (let i =0 ;i<toDos.length;i++ ) {
-//     const liList = document.createElement("li");
-//     liList.innerHTML= toDos[i];
-//     liElements.append(liList);
-// }
 toDos.forEach((elem) => {
 const liList = document.createElement("li");
 liList.innerHTML= elem;
 liElements.append(liList);
 });
+// for (let i =0 ;i<toDos.length;i++ ) {
+//     const liList = document.createElement("li");
+//     liList.innerHTML= toDos[i];
+//     liElements.append(liList);
+// }
 }
 randerList();
 
 //5
 const addToList = () => {
     // console.log("hi!");
-const textValue = document.querySelector("#text1");
-// console.log(textValue.value);
-
+const textValue = document.querySelector("#text1").value;
+console.log(textValue);
+toDos.push(textValue);
+const liElements = document.querySelector("#uList");
+const liList = document.createElement("li");
+liList.innerHTML= textValue;
+liElements.append(liList);
 
 }
 
@@ -56,4 +60,4 @@ addToList();
 
 
 
-
+//
