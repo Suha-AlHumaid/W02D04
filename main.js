@@ -41,6 +41,7 @@ const randerList = () => {
     editBtn.setAttribute("type", "button");
     editBtn.setAttribute("value", "Edit");
     editBtn.id="editBtn";
+    editBtn.addEventListener("click",(i) => edit(i));
     liList.append(editBtn);
 
   });
@@ -79,7 +80,7 @@ randerList();
 //7
   
   
-const editList = () => {
-
-    randerList();
+const edit = function(index) {
+console.log("call me?");
+randerList();
   };
