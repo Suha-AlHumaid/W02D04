@@ -39,8 +39,6 @@ text1.setAttribute("type", "text");
 const btn1 = document.createElement("INPUT");
 btn1.setAttribute("type", "button");
 btn1.setAttribute("value", "Add");
-text1.innerHTML="hhhhhh";
-btn1.innerHTML="fff";
 body.append(text1);
 body.append(btn1);
 
